@@ -72,7 +72,7 @@ function App() {
         <PokemonDetailModal
           pokemon={selectedPokemon}
           closeModal={closeModal}
-        />
+        />  
       )}
     </div>
   );
