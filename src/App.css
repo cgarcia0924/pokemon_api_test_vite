@@ -1,0 +1,160 @@
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+/* Search bar container */
+.search-bar {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Pokémon grid */
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Dynamically adjust column count */
+  gap: 20px; /* Space between cards */
+  padding: 16px;
+  width: 100%; /* Ensure grid takes up full width */
+  max-width: 1200px; /* Optional: Constrain the grid width */
+  margin: 0 auto; /* Center the grid container horizontally */
+  justify-items: center; /* Ensure cards are centered in their grid cells */
+}
+
+
+.pokemon-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #f9f9f9;
+  text-align: center;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+  width: 100%; /* Ensure the card fits its container */
+  max-width: 150px; /* Prevent cards from growing too large */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for better visuals */
+}
+
+.pokemon-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15); /* Add a stronger shadow on hover */
+}
+
+.pokemon-card img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 8px;
+}
+
+.pokemon-card p {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .pokemon-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjust column size for tablets */
+    gap: 16px; /* Adjust spacing */
+  }
+
+  .pokemon-card {
+    max-width: 120px; /* Reduce card size for tablets */
+    padding: 12px;
+  }
+
+  .pokemon-card img {
+    width: 80px;
+    height: 80px; /* Smaller image size */
+  }
+
+  .pokemon-card p {
+    font-size: 12px; /* Smaller text size */
+  }
+}
+
+@media (max-width: 480px) {
+  .pokemon-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjust column size for mobile */
+    gap: 10px;
+  }
+
+  .pokemon-card {
+    max-width: 100px; /* Smaller card size for mobile */
+    padding: 10px;
+  }
+
+  .pokemon-card img {
+    width: 70px;
+    height: 70px; /* Smaller image size for mobile */
+  }
+
+  .pokemon-card p {
+    font-size: 10px; /* Smaller text size for mobile */
+  }
+}
+
+/* Modal styling */
+.modal {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
+
+.pokemon-detail img {
+  width: 150px;
+  height: 150px;
+  margin: 20px 0;
+}
+
+.pokemon-detail button.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
